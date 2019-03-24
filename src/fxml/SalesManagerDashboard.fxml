@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="714.0" prefWidth="1306.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SalesManagerDashboardController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="-4.0" prefHeight="665.0" prefWidth="204.0" spacing="10.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="104.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/jimmy-fallon.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" prefHeight="38.0" prefWidth="143.0" text="Sales Manager Name" textFill="#e7e5e5" />
+            <Button fx:id="btnDashboard" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="208.0" stylesheets="@../styling/fullpackstyling.css" text="Dashboard">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnCars" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="208.0" stylesheets="@../styling/fullpackstyling.css" text="Cars">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnAddCar" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="208.0" stylesheets="@../styling/fullpackstyling.css" text="Add Car">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnSellers" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="208.0" stylesheets="@../styling/fullpackstyling.css" text="Sellers">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnSales" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="208.0" stylesheets="@../styling/fullpackstyling.css" text="Sales">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnFeedbacks" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="208.0" stylesheets="@../styling/fullpackstyling.css" text="Feedbacks">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnCustomers" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="208.0" stylesheets="@../styling/fullpackstyling.css" text="Customers">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnSignout" mnemonicParsing="false" onAction="#handleSignoutButton" prefHeight="25.0" prefWidth="208.0" stylesheets="@../styling/fullpackstyling.css" text="Signout">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnExit" mnemonicParsing="false" onAction="#handleExitButton" prefHeight="25.0" prefWidth="208.0" stylesheets="@../styling/fullpackstyling.css" text="Exit">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <StackPane layoutX="205.0" prefHeight="714.0" prefWidth="1098.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="208.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane fx:id="pnFeedback" prefHeight="200.0" prefWidth="200.0" />
+            <Pane fx:id="pnSales" prefHeight="200.0" prefWidth="200.0" />
+            <Pane fx:id="pnCars" prefHeight="200.0" prefWidth="200.0" />
+            <Pane fx:id="pnCustomers" prefHeight="200.0" prefWidth="200.0" />
+            <Pane fx:id="pnAddCar" prefHeight="200.0" prefWidth="200.0" />
+            <Pane fx:id="pnSellers" prefHeight="200.0" prefWidth="200.0" />
+            <Pane fx:id="pnOverview" prefHeight="596.0" prefWidth="1047.0" style="-fx-background-color: black;">
+               <children>
+                  <Label alignment="CENTER" layoutX="14.0" layoutY="215.0" prefHeight="132.0" prefWidth="1078.0" text="Autopedia Car Dealers Management System" textFill="#fff6fc">
+                     <font>
+                        <Font name="Freestyle Script" size="62.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" layoutX="14.0" layoutY="337.0" prefHeight="132.0" prefWidth="1078.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="104.0" prefWidth="125.0">
+                           <children>
+                              <Label text="300" textFill="#da0e0e">
+                                 <font>
+                                    <Font name="Brush Script MT Italic" size="50.0" />
+                                 </font>
+                              </Label>
+                              <Label lineSpacing="30.0" text="Cars" textFill="#f8f4f4">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="104.0" prefWidth="125.0">
+                           <children>
+                              <Label text="30" textFill="#3be48d">
+                                 <font>
+                                    <Font name="Brush Script MT Italic" size="50.0" />
+                                 </font>
+                              </Label>
+                              <Label lineSpacing="30.0" text="Brands" textFill="#fcf8f8">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="104.0" prefWidth="125.0">
+                           <children>
+                              <Label text="72" textFill="#220fd9">
+                                 <font>
+                                    <Font name="Brush Script MT Italic" size="50.0" />
+                                 </font>
+                              </Label>
+                              <Label lineSpacing="30.0" text="Sales" textFill="#e8e6e6">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="104.0" prefWidth="125.0">
+                           <children>
+                              <Label text="3" textFill="#d90fbe">
+                                 <font>
+                                    <Font name="Brush Script MT Italic" size="50.0" />
+                                 </font>
+                              </Label>
+                              <Label lineSpacing="30.0" text="Sellers" textFill="#ebe9e9">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="104.0" prefWidth="125.0">
+                           <children>
+                              <Label text="890" textFill="#ebb0cd">
+                                 <font>
+                                    <Font name="Brush Script MT Italic" size="50.0" />
+                                 </font>
+                              </Label>
+                              <Label lineSpacing="30.0" text="Customers" textFill="#fcf6f6">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="104.0" prefWidth="126.0">
+                           <children>
+                              <Label text="12" textFill="#0fbeee">
+                                 <font>
+                                    <Font name="Brush Script MT Italic" size="50.0" />
+                                 </font>
+                              </Label>
+                              <Label lineSpacing="30.0" text="Feedbacks" textFill="#f5f4f4">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Pane layoutY="-9.0" prefHeight="665.0" prefWidth="1098.0">
+                     <children>
+                        <Pane layoutX="28.0" layoutY="501.0">
+                           <children>
+                              <ImageView fitHeight="151.0" fitWidth="211.0" layoutX="-7.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/featured-img-1.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="297.0" layoutY="501.0">
+                           <children>
+                              <ImageView fitHeight="151.0" fitWidth="211.0" layoutX="-7.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/featured-img-2.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="830.0" layoutY="501.0">
+                           <children>
+                              <ImageView fitHeight="151.0" fitWidth="211.0" layoutX="-7.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/featured-img-1.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="558.0" layoutY="501.0">
+                           <children>
+                              <ImageView fitHeight="151.0" fitWidth="211.0" layoutX="-7.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/featured-img-3.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <ImageView fitHeight="180.0" fitWidth="200.0" layoutX="449.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8-car-512.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="773.0" layoutY="72.0" prefHeight="38.0" prefWidth="296.0" style="-fx-border-color: blue; -fx-border-radius: 30;" text="Sales Manager Dashboard" textFill="#f2efef">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="156.0" layoutY="317.0" prefHeight="0.0" prefWidth="786.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

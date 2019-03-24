@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="714.0" prefWidth="1308.0" style="-fx-background-color: #AFEEEE;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SellerDashboardController">
+    <stylesheets>
+        <URL value="@/styling/fullpackstyling.css" />
+    </stylesheets>
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="-2.0" layoutY="-3.0" prefHeight="721.0" prefWidth="186.0" style="-fx-background-color: #B0E0E6;">
+         <children>
+            <ImageView fitHeight="134.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-user-photo-64.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" prefHeight="28.0" prefWidth="180.0" text="Seller" textFill="#22161d">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <JFXButton fx:id="btnDashboard" buttonType="RAISED" onAction="#handleButtonAction" prefHeight="48.0" prefWidth="186.0" text="Dashboard" />
+            <JFXButton fx:id="btnCars" buttonType="RAISED" onAction="#handleButtonAction" prefHeight="48.0" prefWidth="186.0" text="View Cars" />
+            <JFXButton fx:id="btnSales" buttonType="RAISED" onAction="#handleButtonAction" prefHeight="48.0" prefWidth="186.0" text="Sales" />
+            <JFXButton fx:id="btnFeedback" buttonType="RAISED" onAction="#handleButtonAction" prefHeight="48.0" prefWidth="186.0" text="Feedback" />
+            <JFXButton fx:id="btnSignout" buttonType="RAISED" onAction="#handleSignoutButton" prefHeight="48.0" prefWidth="186.0" text="Signout" />
+            <JFXButton fx:id="btnExit" buttonType="RAISED" onAction="#handleExitButton" prefHeight="48.0" prefWidth="186.0" text="Exit" />
+         </children>
+      </VBox>
+      <StackPane layoutX="184.0" prefHeight="718.0" prefWidth="1127.0" style="-fx-background-color: blue;">
+         <children>
+            <Pane fx:id="pnSales" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: cyan;" />
+            <Pane fx:id="pnCars" prefHeight="200.0" prefWidth="200.0" />
+            <Pane fx:id="pnFeedback" prefHeight="200.0" prefWidth="200.0" />
+            <Pane fx:id="pnDashboard" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <children>
+                  <HBox layoutX="161.0" layoutY="259.0" prefHeight="100.0" prefWidth="811.0">
+                     <children>
+                        <VBox prefHeight="100.0" prefWidth="172.0">
+                           <children>
+                              <Label fx:id="lbTotalCars" alignment="CENTER" prefHeight="57.0" prefWidth="188.0" text="220">
+                                 <font>
+                                    <Font size="49.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="57.0" prefWidth="188.0" text="Cars">
+                                 <font>
+                                    <Font name="Freestyle Script" size="32.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="100.0" prefWidth="172.0">
+                           <children>
+                              <Label fx:id="lbTotalBrands" alignment="CENTER" prefHeight="57.0" prefWidth="188.0" text="22" textFill="#3beb0e">
+                                 <font>
+                                    <Font size="49.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="57.0" prefWidth="188.0" text="Car Brands">
+                                 <font>
+                                    <Font name="Freestyle Script" size="32.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="100.0" prefWidth="172.0">
+                           <children>
+                              <Label fx:id="lbTotalSales" alignment="CENTER" prefHeight="57.0" prefWidth="188.0" text="720" textFill="#e81c1c">
+                                 <font>
+                                    <Font size="49.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="57.0" prefWidth="188.0" text="Sales">
+                                 <font>
+                                    <Font name="Freestyle Script" size="32.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="100.0" prefWidth="172.0">
+                           <children>
+                              <Label fx:id="lbTotalCustomers" alignment="CENTER" prefHeight="57.0" prefWidth="188.0" text="300" textFill="#eb0ab6">
+                                 <font>
+                                    <Font size="49.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="57.0" prefWidth="188.0" text="Customers">
+                                 <font>
+                                    <Font name="Freestyle Script" size="32.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="100.0" prefWidth="172.0">
+                           <children>
+                              <Label fx:id="lbTotalFeedbacks" alignment="CENTER" prefHeight="57.0" prefWidth="188.0" text="90">
+                                 <font>
+                                    <Font size="49.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="57.0" prefWidth="188.0" text="Feedback">
+                                 <font>
+                                    <Font name="Freestyle Script" size="32.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER" layoutX="265.0" layoutY="184.0" prefHeight="48.0" prefWidth="501.0" text="Autopedia Car Dealers Management System">
+                     <font>
+                        <Font name="Freestyle Script" size="30.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="416.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-car-512.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="849.0" layoutY="24.0" prefHeight="28.0" prefWidth="249.0" style="-fx-border-color: blue; -fx-border-radius: 30;" text="Seller Dashboard" />
+                  <HBox alignment="CENTER" layoutX="326.0" layoutY="548.0" prefHeight="116.0" prefWidth="420.0">
+                     <children>
+                        <ImageView fitHeight="61.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8-facebook-64%20-%20Copy.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="59.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8-github-64%20-%20Copy.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="61.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8-twitter-64%20(1)%20-%20Copy.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children></Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

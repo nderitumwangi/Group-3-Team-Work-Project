@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="718.0" prefWidth="1127.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controllers.SellerFeedbackController">
+   <children>
+      <JFXTabPane layoutX="24.0" layoutY="17.0" prefHeight="671.0" prefWidth="1068.0">
+         <tabs>
+            <Tab style="-fx-pref-width: 400;" text="Add FeedBack">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutX="91.0" layoutY="41.0" prefHeight="564.0" prefWidth="928.0">
+                           <children>
+                              <JFXTextField fx:id="txtCustomerName" labelFloat="true" layoutX="135.0" layoutY="63.0" prefHeight="30.0" prefWidth="649.0" promptText="Customer Name">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtCustomerContact" labelFloat="true" layoutX="142.0" layoutY="132.0" prefHeight="25.0" prefWidth="605.0" promptText="Customer Contact">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtSellerId" labelFloat="true" layoutX="149.0" layoutY="206.0" prefHeight="25.0" prefWidth="605.0" promptText="Seller Id">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextArea fx:id="txtFeedbackDescription" labelFloat="true" layoutX="147.0" layoutY="274.0" prefHeight="83.0" prefWidth="601.0" promptText="Feedback Description">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXTextArea>
+                              <JFXDatePicker fx:id="txtDate" layoutX="143.0" layoutY="388.0" prefHeight="25.0" prefWidth="603.0" />
+                              <JFXButton fx:id="btnAdd" layoutX="394.0" layoutY="459.0" onAction="#HandleEvents" prefHeight="48.0" prefWidth="140.0" ripplerFill="#0ce462" style="-fx-background-color: blue;" text="Add Feedback" textFill="#f8f6f6">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXButton>
+                              <Label fx:id="lblStatus" layoutX="17.0" layoutY="5.0" prefHeight="37.0" prefWidth="625.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab style="-fx-pref-width: 400;" text="View FeedBack">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tblFeedback" layoutX="27.0" layoutY="23.0" prefHeight="590.0" prefWidth="1031.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>
